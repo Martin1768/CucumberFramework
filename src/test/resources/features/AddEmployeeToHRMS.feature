@@ -18,3 +18,13 @@ Feature: Add Employee to HRMS
       |           | Alexander  | Brown    |
       | Sarah     | Elizabeth  |          |
       | Daniel    | James      | Wilson   |
+
+  Scenario: add an employee to the HRMS application with unique employee ID
+    And user enters firstname and middlename and lastname and employeeID
+      | firstname | middlename | lastname | id         |
+      |           |            |          | 1e17TDRZHu |
+      | John      | Michael    | Smith    | KOzORGvxRh |
+      | Emily     |            | Johnson  | M4DVzzK09k |
+      |           | Alexander  | Brown    | NKndbNhthP |
+      | Sarah     | Elizabeth  |          | POIW3mpu0Q |
+      | Daniel    | James      | Wilson   | mXGFIv7goT |

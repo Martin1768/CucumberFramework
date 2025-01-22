@@ -18,6 +18,9 @@ public class AddEmployeePOM extends CommonMethods {
     @FindBy(css = "input#lastName")
     public WebElement lastNameAddEmplForm;
 
+    @FindBy(css = "input#employeeId")
+    public WebElement emplIDAddEmplForm;
+
     @FindBy(css = "a#menu_pim_addEmployee")
     public WebElement addEmplBtnAddEmplForm;
 
