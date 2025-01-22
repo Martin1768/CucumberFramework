@@ -32,9 +32,6 @@ public class AddEmployeeToHRMS extends CommonMethods {
             sendTextToElement(newEmploee.get("firstname") == null ? ""+Keys.ESCAPE : newEmploee.get("firstname"), addEmployeePage.firstNameAddEmplForm);
             sendTextToElement(newEmploee.get("middlename") == null ? "" : newEmploee.get("middlename"), addEmployeePage.middleNameAddEmplForm);
             sendTextToElement(newEmploee.get("lastname") == null ? ""+Keys.ESCAPE : newEmploee.get("lastname"), addEmployeePage.lastNameAddEmplForm);
-            //waitForElementToBeVisible(addEmployeePage.requiredFirstName);
-//            clickOnElement(addEmployeePage.saveBtnAddEmplForm);
-//            WebElement verificationElement = driver.findElement(By.cssSelector("div.head h1"));
             boolean firstNameEmpty = addEmployeePage.firstNameAddEmplForm.getAttribute("value").isEmpty();
             boolean lastNameEmpty = addEmployeePage.lastNameAddEmplForm.getAttribute("value").isEmpty();
             if (firstNameEmpty) {
@@ -49,7 +46,7 @@ public class AddEmployeeToHRMS extends CommonMethods {
                 if (requiredLastName.isDisplayed()) System.out.println(Constants.greenText + "'Required' is displayed (PASSED)" + Constants.nocolorText);
                 else System.out.println(Constants.redText + "'Required' is not displayed (FAILED)" + Constants.nocolorText);
             }
-            Thread.sleep(3000);
+            Thread.sleep(2000);
             if (!(firstNameEmpty || lastNameEmpty)) {
                 clickOnElement(addEmployeePage.saveBtnAddEmplForm);
                 clickOnElement(addEmployeePage.addEmplBtnAddEmplForm);
